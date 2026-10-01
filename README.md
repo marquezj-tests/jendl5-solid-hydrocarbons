@@ -49,6 +49,8 @@ Repository layout
 * `src/ncrystal_plugin_jendl5-solid-hydrocarbons/` - the plugin (python package and `data/` with the NCMAT files). Only this
   directory is packaged.
 * `reference/` - NJOY2016 thermr inelastic cross sections (one CSV per NCMAT file, per-atom average over the molecule).
+  `reference/effective_temperature.csv` lists the effective temperature T_eff [K] of the principal scatterer, from the ENDF-6
+  MF7/MT4 table of each source file, for every material, temperature and atom type of the plugin.
 * `scripts/compare_with_reference.py` - loads the installed plugin files with NCrystal and plots them against `reference/`
   (`python scripts/compare_with_reference.py [--out DIR] [pattern ...]`).
 * `plots/` - NCrystal vs NJOY comparison plot for each file, and `summary.csv`.
